@@ -3,7 +3,7 @@ use std::ffi::CString;
 use std::sync::mpsc::Sender;
 use service_status::SERVICE_STATUS;
 
-#[link(name = "Advapi32")]
+#[link(name = "advapi32")]
 #[allow(improper_ctypes)]
 extern "stdcall" {
     pub fn StartServiceCtrlDispatcherA(service_table : *const SERVICE_TABLE_ENTRY) -> c_int;
